@@ -1,0 +1,15 @@
+<ng-template [ngIf]="!showErrorPage" [ngIfElse]="errorPage">
+<nav *ngIf="!showErrorPage" class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" [routerLink]="['/']">
+      <img src="/assets/logo-blueghost-top.svg" alt="logo BlueGhost" width="190">
+    </a>
+  </div>
+</nav>
+<div class="container my-5" [@routeAnimations]="getRouteAnimationData()">
+  <router-outlet *ngIf="!showErrorPage"></router-outlet>
+</div>
+</ng-template>
+<ng-template #errorPage>
+  <app-not-found *ngIf="showErrorPage"></app-not-found>
+</ng-template>

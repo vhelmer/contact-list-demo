@@ -1,0 +1,14 @@
+stdClass:
+  names_{1..100}:
+    firstName (unique): '<firstName()>'
+    lastName: '<lastName()>'
+    fullName: '$firstName $lastName'
+
+App\Entity\Contact:
+  contact_{1..100}:
+    firstName: '@names_<current()>->firstName'
+    lastName: '@names_<current()>->lastName'
+    email: '50%? <email()>'
+    phoneNumber: '50%? <phoneNumber()>'
+    note: '50%? <text()>'
+    slug: '<webalize(@names_<current()>->fullName)>'
