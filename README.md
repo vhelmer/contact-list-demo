@@ -2,7 +2,7 @@ Contact list - Demo Application
 ===============================
 
 This application is a combination of:
-* REST API backend written in Symfony2 and [API Platform](https://api-platform.com/)
+* REST API backend written in Symfony and [API Platform](https://api-platform.com/)
 * MVC frontend client written in [Angular](https://angular.io/)
 * [Angular Universal](https://angular.io/guide/universal) for Server-side rendering
 
